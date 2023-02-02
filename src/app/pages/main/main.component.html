@@ -1,0 +1,29 @@
+<!-- <link href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link href= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+<div *ngIf="VilleInfo">
+    <h1>Pays: {{VilleInfo.country}}</h1>
+    <ul class="carousel-indicators">
+        <li>ville: {{VilleInfo.name}}</li>
+        <li> latitude: {{VilleInfo.latitude}}</li>
+        <li> longitude: {{VilleInfo.longitude}}</li>
+    </ul>
+</div>
+
+<div *ngIf="current_condition">
+    <h1>Les conditions actuels: {{current_condition.condition}}</h1>
+    <ul class="carousel-indicators">
+        <li>humidity: {{current_condition.humidity}}</li>
+        <li> date actuell: {{current_condition.date | date : "dd MMMM y hh:MM:SS"}}</li>
+        <li> heure actuell: {{current_condition.hour}}</li>
+        <li> Temperature: {{current_condition.tmp}}</li>
+        <li> Vitesse du vent: {{current_condition.wnd_spd}}</li>
+        <li> Direction du vent: {{current_condition.wnd_dir}}</li>
+        <li>icon 
+            <img src ="https://prevision-meteo.ch/style/images/icon/nuit-claire.png">
+        </li>
+    </ul>
+</div>
+
+
+
